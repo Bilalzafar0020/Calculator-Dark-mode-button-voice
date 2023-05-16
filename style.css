@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+ background-color:  #E5E5E5;
+ width: 100vw;
+ height: 100vh;
+  overflow: hidden; 
+
+}
+
+div.main{
+    /* width: 100%;
+    height: 100%; */
+  display: flex;
+  align-items:center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+}
+
+div.extra{
+    width: 320px;
+    height: 30rem;
+    margin-top: 10px;
+    background: linear-gradient(166.34deg, #FEFEFE 0%, #F9F9F9 12.84%, #F3F3F3 32.53%, #E5E5E5 100%);
+    border-radius: 40px;
+}
+
+
+
+.header{
+    margin-top: 1.4rem;
+    height: 26vh;
+    text-align: right;
+   /* background-color: #f3f3f3; 
+     border-radius: 22px 22px 0px 0px; 
+     width: 19.8rem;
+    border: 0px solid #f7f4f5; */
+
+}  
+
+.mainCalculator{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+     background-color:#cae0f8 ;
+     width: 20rem;
+     border-radius: 14px 22px;
+   height: 65vh;
+}
+
+table.left_side{
+   margin-left: 23px;
+}
+
+button{
+    font-weight: 130;
+    font-size: 20px;   
+    border: none;
+    outline: none;   
+  /* Remove default background color */
+  background-color: transparent;
+color:#373737; 
+cursor: pointer;
+height: 1.5rem;
+width: 4rem;
+}
+
+table.right_side{
+    margin-left: 10px;
+    margin-top: 10px;
+ }
+tr.main_row{
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.3);    
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 40px;
+    gap: 45px;
+    margin-top: 10px;
+    width: 60px;
+height: 300px;
+}
+td button svg{
+size: 10px;
+}
+
+
+
+
