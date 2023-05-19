@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
 
  <!-- Favicon image (icon for website title) -->
 
- <link rel="icon"  type="image/x-icon" href="./images.png" style="color: blue;" >
+ <link rel="icon"  type="image/x-icon" href="./icons8-calculator-64.png" style="color: blue;" >
 
 <!--icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -28,6 +28,11 @@
 </head>
 <body>
 
+
+	<audio src="./mixkit-clear-mouse-clicks-2997.wav" id="audio" preload="auto"></audio>
+
+
+
  <!-- main div -->   
 <div class="main" >
 
@@ -41,14 +46,21 @@
 
 
     <!-- Dark - Light theme -->
-    <div class="themes" style="text-align: center;">  <button>light mode</button>    </div>
-    
-    
+    <div class="themes"> 
+<button><img src="./sun (4).png"
+     alt="Light_mode" width="35px" height="40px" class="light"></button>
+<button ><img src="./night-mode.png" alt="Dark mode" width="35px" height="40px"></button>        
+     
+
+</div>
+        
     <!--typingArea -->
-    <div class="typing" >222</div>
+    <div class="typing"  id="typing1"></div>
     
     <!--Result-->
-    <div class="result" >00</div>
+    <div class="result"  id="result_area">   <!--  id="result_area"  solution to write maximum nmber in a div -->
+    <p class="equalto">=</p>  <p id="result_area">0</p>
+    </div>
     </div>
     
 
@@ -63,45 +75,45 @@
 
 <table class="left_side">
 
-<tr class="1_row">
+<tr class="first_row">
 
-<td > <button >AC</button> </td>
-<td > <button > <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+<td > <button onclick="clearResult(), audio()" >AC</button> </td>
+<td > <button onclick="remove(),audio()"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
     <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
   </svg>      </button> </td>
 
-<td > <button >%</button> </td>
+<td > <button onclick="value_Display('%'),audio()">%</button> </td>
 
 
 </tr>
 
 
-<tr class="2_row">
+<tr class="second_row">
     
-<td> <button>1</button> </td>
-<td> <button>2</button> </td>
-<td> <button>3</button> </td>
+<td > <button class="shadow" onclick="value_Display('1'),audio()">1</button> </td>
+<td> <button class="shadow" onclick="value_Display('2'),audio()">2</button> </td>
+<td> <button class="shadow" onclick="value_Display('3'),audio()">3</button> </td>
 </tr>
 
-<tr class="3_row">
+<tr class="third_row">
     
-    <td> <button>4</button> </td>
-    <td> <button>5</button> </td>
-    <td> <button>6</button> </td>
+    <td> <button  class="shadow" onclick="value_Display('4'),audio()">4</button > </td>
+    <td> <button class="shadow"onclick="value_Display('5'),audio()">5</button > </td>
+    <td> <button class="shadow"onclick="value_Display('6'),audio()">6</button > </td>
     </tr>
     
-    <tr class="4_row">
+    <tr class="four_row">
     
-        <td> <button>7</button> </td>
-        <td> <button>8</button> </td>
-        <td> <button>9</button> </td>
+        <td> <button class="shadow" onclick="value_Display('7') ,audio()  ">7</button > </td>
+        <td> <button class="shadow" onclick="value_Display('8') ,audio()">8</button > </td>
+        <td> <button class="shadow" onclick="value_Display('9') ,audio()">9</button > </td>
         </tr>
         
-        <tr class="5_row">
+        <tr class="five_row">
     
-            <td> <button>.</button> </td>
-            <td> <button>0</button> </td>
-            <td> <button>00</button> </td>
+            <td> <button class="shadow" onclick="value_Display('.') , audio()">.</button > </td>
+            <td> <button class="shadow" onclick="value_Display('0') ,audio()">0</button > </td>
+            <td> <button class="shadow" onclick="value_Display('00') ,audio()">00</button > </td>
             </tr>
             
 </table>
@@ -111,14 +123,12 @@
 
     <tr class="main_row">
     
-        <td> <button><i class="fa-solid fa-divide"></i></button> </td>
-        <td> <button class="svg "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-          </svg></button> </td>
-
-        <td> <button>-</button> </td>
-        <td> <button>+</button> </td>
-        <td> <button class="equal">=</button> </td>
+<td> <button onclick="value_Display('/') ,audio()"><i class="fa-solid fa-divide"></i></button> </td>
+<td> <button  onclick="value_Display('*') , audio()"  class="shadow2" style="font-size: 15px;"><i class="fa-solid fa-x"></i></button> </td>
+<!-- for multiply appear &#215;   for divide &247;    -->
+        <td> <button class="shadow2" onclick="value_Display('-'),audio()">-</button> </td>
+        <td> <button class="shadow2" onclick="value_Display('+'),audio()">+</button> </td>
+        <td> <button class="extra_shadow" onclick="calculate(),audio()">=</button> </td>
         </tr>
         
 
@@ -128,5 +138,8 @@
 
 </div>
 
+
+
+<script src="./script.js"></script>
 </body>
 </html>
