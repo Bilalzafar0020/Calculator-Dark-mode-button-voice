@@ -188,6 +188,7 @@ button.extra_shadow{
 height: 50px;
 }
 
+/* small screens */
 @media screen and (max-width:360px) and (min-width:310px) {
   .mainCalculator{
     width: 18rem;
@@ -278,11 +279,11 @@ div.extra{
 
 
 
-@media screen and (max-height:1020px) and (min-height:821px) {
+@media screen and (max-height:1220px) and (min-height:821px) {
   div.extra{
     width: 320px;
     height: 30rem;
-    margin-top: 102px;
+    margin-top: 115px;
     background: linear-gradient(166.34deg, #FEFEFE 0%, #F9F9F9 12.84%, #F3F3F3 32.53%, #E5E5E5 100%);
     border-radius: 40px;
   
