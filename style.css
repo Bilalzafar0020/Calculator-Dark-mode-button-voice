@@ -44,9 +44,32 @@ div.themes{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: none;
+  align-items: center; 
 }
+.theme-border{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  background: #a9dcfd;
+border-radius:  70px;
+width: 90px;
+height: 30px;
+box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+}
+ .light_mode{
+background: #d8eeff;
+width: 90px;
+height: 35px;
+border-radius:  55%;
+box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+}
+.dark_mode{
+  margin-top: 6px
+}
+
+
 div.typing{
   margin-top: 60px;
   font-size: 16px;
@@ -301,8 +324,85 @@ div.extra{
     border-radius: 40px;
   
   }
-  
+}
 
+/*   Dark mode  */
+
+body.dark-theme{
+  background-color:#0D1117;
+}
+
+ body.dark-theme  div.extra{
+  background: linear-gradient(166.34deg, #373737 0%, #252628 22.9%, #000309 100%);
+}
+
+body.dark-theme .mainCalculator{
+  background: #4d94d6;
+
+  background: linear-gradient(244.38deg, #42869B 8.14%, #2A7DA1 27.9%);
+}
+
+body.dark-theme button{  
+background-color: transparent;
+color:#f1eded; 
+}
+body.dark-theme tr.first_row{
+
+   background: #0f2433;
+}
+ body.dark-theme tr button:hover{
+  background-color:#000000fb ;
+} 
+body.dark-theme button.shadow{
+
+  background: #0f2433;
+} 
+body.dark-theme  button.shadow:hover{
+  background-color:#000000 ;
+}
+ body.dark-theme tr.main_row{
+
+  background: #0f2433;
+}
+body.dark-theme button.extra_shadow{
+  background: rgba(5, 5, 5, 0.664);
+ 
+}
+
+ body.dark-theme table.left_side::after{
+  content: '';
+  background: #0011ff9d;
 }
 
 
+ body.dark-theme div.typing{
+color: #a6a8ad;
+}
+body.dark-theme div.result{
+  color: #fbfbfb;
+}
+
+body.dark-theme .theme-border{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  background:  #1b6a9c;
+border-radius:  70px;
+width: 90px;
+height: 30px;
+box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+
+  body.dark-theme .dark_mode{
+    background: #003661;
+  width: 120px;
+  height: 35px;
+  border-radius:  60%;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 8px;
+  }
+ 

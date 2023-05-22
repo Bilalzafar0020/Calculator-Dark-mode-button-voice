@@ -2,11 +2,17 @@
 
 let typing = document.querySelector("#typing1");   //  getting the value of typing area
 let result = document.querySelector("#result_area");  //   getting the result area
+
+//  audio for buttons
 function audio(){
-
     document.getElementById('audio').play()
-
 }
+
+//  audio of toogle
+
+function audio1(){
+	document.getElementById(`audio1`).play()
+};
 
 //    we give parameter here value and the argumnent their for every themself buttton is according to their 
 //  number and give id=typing1  to all so that all can access 
@@ -66,5 +72,17 @@ function remove(){
 }
 
 
+//   dark mode setting
+const lightModeBtn = document.getElementById("lightModeBtn");
+const darkModeBtn = document.getElementById("darkModeBtn");
 
 
+lightModeBtn.addEventListener("click", () => {
+    document.body.classList.remove("dark-theme");
+    document.body.classList.add("light-theme");
+});
+
+darkModeBtn.addEventListener("click", () => {
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+});

@@ -17,21 +17,21 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-
-
-
-
-<!-- sound of dark theme -->
-
-
-
 </head>
-<body>
+<body class="light-theme">
+<!--
+#0D1117
+#121212
+darkgray  -->
+
+
 
 <!--sounds of buttons --->
 	<audio src="./click sound.mp3" id="audio" preload="auto"></audio>
 
+<!-- toogle buttons sound   -->
 
+<audio src="./yt5s.io-Button Sound Effects (Copyright Free)(720p) (2).mp4" id="audio1" preload="auto"></audio>
 
  <!-- main div -->   
 <div class="main" >
@@ -47,10 +47,17 @@
 
     <!-- Dark - Light theme -->
     <div class="themes"> 
-<button><img src="./sun (4).png"
-     alt="Light_mode" width="35px" height="40px" class="light"></button>
-<button ><img src="./night-mode.png" alt="Dark mode" width="35px" height="40px"></button>        
-     
+
+   <div class="theme-border">     
+<button class="light_mode"   id="lightModeBtn"  onclick="audio1()">
+    <img src="./sun (4).png" alt="Light_mode" width="35px" height="36px" class="light"></button>
+
+
+<button  class="dark_mode" id="darkModeBtn"  onclick="audio1()">
+    <img src="./night-mode.png" alt="Dark mode" width="35px" height="38px">
+    
+</button>        
+</div>    
 
 </div>
         
